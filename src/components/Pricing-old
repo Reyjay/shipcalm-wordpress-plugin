@@ -1,0 +1,95 @@
+<template>
+  <div class="sc-pricing-wrapper">
+
+      <PricingSection 
+        CheckedValue="true" 
+        SectionTitle="Do you need eCommerce Fulfillment?" 
+        sumTitle="Example Sum Title" 
+        sumTimeDuration="mo" 
+        v-bind:pricingSections="[
+        [
+          {
+            titleText:'How many different types of <strong>small</strong> sized products do you sell? learn more',
+            helperText:'$3/mo per product',
+            image:'https://via.placeholder.com/160x160',
+            imageHelperText: 'Less then 12in³'
+          },
+          {
+            titleText:'How many different types of <strong>medium sized products</strong> do you sell? learn more',
+            helperText:'$5/mo per product',
+            image:'https://via.placeholder.com/160x160',
+            imageHelperText: 'Greater then 12in³ and Less then 2ft³'
+          },
+          {
+            titleText:'How many different types of <strong>large sized products</strong> do you sell? learn more',
+            helperText:'$50/mo per product',
+            image:'https://via.placeholder.com/160x160',
+            imageHelperText: 'Greater then 2ft³ or any side > 24”'
+          }
+        ],
+        [
+          {
+            titleText:'<strong>How many items</strong> do you need us to ship each month? learn more',
+            helperText:'HelperText',
+            image:'https://via.placeholder.com/160x160',
+            imageHelperText: 'Image Helper Text'
+          }
+        ]]"
+        >
+        </PricingSection>
+
+
+
+      <!--Pricing Group-->
+      <div class="sc-pricing-group sc-footer-total">
+
+          
+          <div class="sc-children-wrapper">
+
+              <!--Section Item-->
+              <div class="sc-child">
+
+                  <!--Section Inner Items-->
+                  <div class="sc-child-item-wrapper">
+
+                      <button>Next Step: Get started today!</button>
+
+                  </div><!--END Inner Items-->
+
+                  <div class="sc-pricing-details">
+                      <p class="sc-price-dec">
+                          Total Estimate
+                      </p>
+                      <div class="sc-price-num">
+                          $574 <span>/ mo</span>
+                      </div>
+                  </div>
+
+              </div><!--END Section Item Group-->
+
+          </div>
+
+
+      </div><!--END Pricing Group-->
+
+  </div><!--END sc-pricing-wrapper-->
+  
+</template>
+
+<script>
+  import PricingSection from './PricingComponents/PricingSection.vue'
+  
+  export default {
+    name: 'Pricing',
+    props: {
+      // msg: String
+    },
+    components: {
+      PricingSection
+    }
+  }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
